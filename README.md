@@ -1,4 +1,4 @@
 # dotfiles
 kumpulan konfigurasi komputer Ubuntu/Linux
 
-https://raw.githubusercontent.com/fasih-kode/dotfiles/master/Screenshot%20from%202020-05-04%2019-22-18.png
+https://user-images.githubusercontent.com/55391942/80965789-606b1080-8e3d-11ea-9e86-10b2a5c92ada.png
