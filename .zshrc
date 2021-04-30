@@ -2,69 +2,22 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/nol/.oh-my-zsh"
+export ZSH="/home/aku/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_MODE="nerdfont-complete"
 
-SPACESHIP_PROMPT_ORDER=(
-time
-user
-dir
-git
-hg
-package
-ruby
-php
-docker
-venv
-conda
-pyenv
-line_sep
-vi_mode
-jobs
-exit_code
-char
-)
+POWERLEVEL9K_DISABLE_RPROMPT=true
 
-# #PROMPT
-SPACESHIP_CHAR_SYMBOL='%F{$COLOR 1}\u25cf%F{$COLOR 1}\u25cf%F{$COLOR 1}\u25cf '
-SPACESHIP_PROMPT_ADD_NEWLINE=true
-SPACESHIP_PROMPT_SEPARATE_LINE=true
-SPACESHIP_PROMPT_PREFIXES_SHOW=true
-SPACESHIP_PROMPT_SUFFIXES_SHOW=true
-SPACESHIP_PROMPT_DEFAULT_PREFIX="via "
-SPACESHIP_PROMPT_DEFAULT_SUFFIX=" "
-
-# # TIME
-# SPACESHIP_TIME_SHOW=true
-# SPACESHIP_TIME_COLOR="$COLOR 1"
-# SPACESHIP_TIME_FORMAT="\u29d0 %D{ %a,%d %B %Y}"
-
-# # USER
-SPACESHIP_USER_PREFIX="with "
-SPACESHIP_USER_SUFFIX=""
-SPACESHIP_USER_SHOW=always
-SPACESHIP_USER_COLOR="$COLOR 1 "
-SPACESHIP_USER_COLOR_ROOT="red"
-
-# # HOST
-SPACESHIP_HOST_PREFIX="@:( "
-SPACESHIP_HOST_SUFFIX=")"
-SPACESHIP_HOST_COLOR="green"
-
-# # DIR
-SPACESHIP_DIR_PREFIX="   in "
-SPACESHIP_DIR_SUFFIX=" "
-SPACESHIP_DIR_TRUNC=2
-SPACESHIP_DIR_COLOR="$COLOR 6"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon battery context dir vcs)
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
@@ -85,7 +38,7 @@ SPACESHIP_DIR_COLOR="$COLOR 6"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -97,6 +50,8 @@ SPACESHIP_DIR_COLOR="$COLOR 6"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -116,11 +71,12 @@ SPACESHIP_DIR_COLOR="$COLOR 6"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+plugins=(zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -149,4 +105,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source /home/nol/Public/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/aku/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
