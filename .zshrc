@@ -8,12 +8,67 @@ export ZSH="/home/aku/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_MODE="nerdfont-complete"
 
-POWERLEVEL9K_DISABLE_RPROMPT=true
+ZSH_THEME="spaceship"
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon battery context dir vcs)
+SPACESHIP_PROMPT_ORDER=(
+time
+user
+dir
+git
+hg
+package
+ruby
+php
+docker
+venv
+conda
+pyenv
+line_sep
+vi_mode
+jobs
+exit_code
+char
+)
+
+# #PROMPT
+SPACESHIP_CHAR_SYMBOL='%F{$COLOR 1}\u25cf%F{$COLOR 1}\u25cf%F{$COLOR 1}\u25cf '
+SPACESHIP_PROMPT_ADD_NEWLINE=true
+SPACESHIP_PROMPT_SEPARATE_LINE=true
+SPACESHIP_PROMPT_PREFIXES_SHOW=true
+SPACESHIP_PROMPT_SUFFIXES_SHOW=true
+SPACESHIP_PROMPT_DEFAULT_PREFIX="via "
+SPACESHIP_PROMPT_DEFAULT_SUFFIX=" "
+
+# # TIME
+# SPACESHIP_TIME_SHOW=true
+# SPACESHIP_TIME_COLOR="$COLOR 1"
+# SPACESHIP_TIME_FORMAT="\u29d0 %D{ %a,%d %B %Y}"
+
+# # USER
+SPACESHIP_USER_PREFIX="with "
+SPACESHIP_USER_SUFFIX=""
+SPACESHIP_USER_SHOW=always
+SPACESHIP_USER_COLOR="$COLOR 1 "
+SPACESHIP_USER_COLOR_ROOT="red"
+
+# # HOST
+SPACESHIP_HOST_PREFIX="@:( "
+SPACESHIP_HOST_SUFFIX=")"
+SPACESHIP_HOST_COLOR="green"
+
+# # DIR
+SPACESHIP_DIR_PREFIX="   in "
+SPACESHIP_DIR_SUFFIX=" "
+SPACESHIP_DIR_TRUNC=2
+SPACESHIP_DIR_COLOR="$COLOR 6"
+
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+# POWERLEVEL9K_MODE="nerdfont-complete"
+
+# POWERLEVEL9K_DISABLE_RPROMPT=true
+
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon battery context dir vcs)
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
