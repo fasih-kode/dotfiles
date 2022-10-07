@@ -12,13 +12,11 @@ style_root = "bold red"
 truncation_length = 8
 
 [character]
-##symbol = ""
 success_symbol = "[](bold green) "
 error_symbol = "[✗](bold red) "
 
 [hostname]
 ssh_only = true
-##suffix = "⟫"
 trim_at = "."
 disabled = false
 style = "dimmed 214"
