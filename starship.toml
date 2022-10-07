@@ -1,59 +1,24 @@
-prompt_order = [
-    "username",
-    "hostname",
-    "kubernetes",
-    "directory",
-    "git_branch",
-    "git_commit",
-    "git_state",
-    "git_status",
-    "hg_branch",
-    "package",
-    "dotnet",
-    "elixir",
-    "elm",
-    "golang",
-    "haskell",
-    "java",
-    "nodejs",
-    "php",
-    "python",
-    "ruby",
-    "rust",
-    "terraform",
-    "nix_shell",
-    "conda",
-    "memory_usage",
-    "aws",
-    "env_var",
-    "crystal",
-    "cmd_duration",
-    "line_break",
-    "jobs",
-    "battery",
-    "time",
-    "character",
-]
-
+format = "$all"
+# ~/.config/starship.toml
 
 [username]
 disabled = false
-show_always = false
+show_always = true
+format = "  [$user]($style) in "
+style_user = "bold yellow"
+style_root = "bold red"
 
 [directory]
 truncation_length = 8
-prefix = " in"
 
 [character]
-symbol = ""
-error_symbol = "✗"
-use_symbol_for_status = true
-style_success = "green"
+##symbol = ""
+success_symbol = "[](bold green) "
+error_symbol = "[✗](bold red) "
 
 [hostname]
-ssh_only = false
-prefix = "⟪"
-suffix = "⟫"
-trim_at = ".companyname.com"
+ssh_only = true
+##suffix = "⟫"
+trim_at = "."
 disabled = false
 style = "dimmed 214"
